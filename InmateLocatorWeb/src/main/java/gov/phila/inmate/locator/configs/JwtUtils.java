@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
@@ -15,9 +16,12 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 
 @Component
 public class JwtUtils {
+	
+	@Value("${jwt.token.secret}")
+	private String tokenSecret;
 
 	public DecodedJWT getDecodedJwt(String token) {
-		Algorithm algorithm = Algorithm.HMAC256("secret");
+		Algorithm algorithm = Algorithm.HMAC256(tokenSecret);
 	    JWTVerifier verifier = JWT.require(algorithm)
 	        .build();
 	    return verifier.verify(token);
