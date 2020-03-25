@@ -1,0 +1,4 @@
+gov/phila/inmate/locator/controllers/WardenInmateLocatorControllerTest.class
+gov/phila/inmate/locator/controllers/PublicInmateLocatorControllerTest.class
+gov/phila/inmate/locator/controllers/AdminInmateLocatorControllerTest.class
+gov/phila/inmate/locator/services/InmateLocatorServiceTest.class
