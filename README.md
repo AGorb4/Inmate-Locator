@@ -10,6 +10,12 @@ Execute Command - java -jar InmateLocatorWeb/target/InmateLocatorWeb-0.0.1-SNAPS
 
 Server should start successfully and begin running on localhost:8080.
 
+Simplifications - 
+Turned DOB input type into a String so it's easier to test for me. Otherwise would keep it as a Java Date object.
+
+Assumptions-
+JWT will be sent in the Authorization Header with prefix of "Bearer ".
+
 Swagger URL - http://localhost:8080/swagger-ui.html
 
 Inmate List - 
